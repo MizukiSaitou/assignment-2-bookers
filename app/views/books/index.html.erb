@@ -1,9 +1,12 @@
 <h2>New Book</h2>
-<% @lists.each do |list| %>
+<% @books.each do |book| %>
 
-<p>title</p>
-<span><%= list.title %></span>
+<p>本のタイトル</p>
+<span>
+<%= link_to book.title,book_path(book.id) %>
+</span>
+
+<p>感想</p>
+<span><%= book.body %></span>
 <% end %>
-
-
 
